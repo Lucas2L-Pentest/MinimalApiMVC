@@ -25,7 +25,7 @@ public class EnderecoController : ControllerBase
             return NotFound("Pessoa não encontrada");
 
         _context.Enderecos.Add(endereco);
-        await _context.SaveChangesAsync()
+        await _context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(CreateEndereco), new { id = endereco.Id }, endereco);
     }
